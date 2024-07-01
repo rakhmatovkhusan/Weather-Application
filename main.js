@@ -1,7 +1,17 @@
 fetch("https://api.weatherapi.com/v1/forecast.json?key=644f6ce0ca9e401ebb891832211707&q=tashkent&days=7&aqi=yes&alerts=yes")
     .then(res => res.json())
     .then(data => weatherApp(data))
+    .catch(err => console.log(err))
 
+
+form.addEventListener("submit", () => {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=644f6ce0ca9e401ebb891832211707&q=${inp.value == "" ? "tashkent" : `${inp.value}`}&days=7&aqi=yes&alerts=yes`)
+    .then(res => res.json())
+    .then(data => weatherApp(data))
+    .catch(err => console.log(err))
+
+    inp.value = ""
+})
 
 
 function weatherApp(data){
