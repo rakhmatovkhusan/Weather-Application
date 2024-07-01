@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --light: #72edf2; 
+    --dark: #5151e5; 
+}
+
+.head_div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.weather_monitor_div{
+    width: 400px;
+    height: 540px;
+    border-radius: 3%;
+    background:url(https://assets.isu.pub/document-structure/230518205617-58611fd0382a1c2e5ae4ef4140baeace/v1/ca7bd1cd1e84e127a691aa15cc33e6b5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 300ms ease;
+    transform: translateZ(0) scale(1.02) perspective(1000px);
+    cursor: pointer;
+}
+
+.weather_monitor_div:hover{
+    transform: scale(1.09) perspective(1500px) rotateY(10deg);
+}
+
+.weather_concept_div{
+    width: 400px;
+    height: 500px;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+    padding: 40px 20px;
+    background-color: rgb(36, 34, 34);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.weather_monitor_sky{
+    width: 100%;
+    height: 540px;
+    border-radius: 3%;
+    padding: 40px 20px;
+    background: linear-gradient(90deg, #efd5ff9e 0%, #515ada89 100%);
+}
+
+
+.first_concept{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+}
+
+.temprature_div{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+.svg_sun{
+    margin-top: 45%;
+}
+
+.weather_part{
+    width: 110px;
+    height: 150px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgb(47, 46, 46);
+    color: white;
+    transition: all ease 0.3s;
+}
+
+.weather_part p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.weather_part:hover{
+    transition: all ease 0.3s;
+    transform: scale(1.09);
+    font-weight: bold;
+    color: #000;
+    background-color: white;
+}
+
+.search_area{
+    width: 98%;
+    height: 35px;
+    margin: 35px auto;
+    display: flex;
+    background-color: red;
+    position: relative;
+    overflow-x: hidden;
+    border-radius: 50px;
+}
+
+.search_area form{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translateX(100%);
+    border-radius: 50px;
+    background-color: white;
+}
+
+.search_area form input{
+    flex: 1;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 50px;
+}
+
+#change_btn{
+    width: 100%;
+    background: linear-gradient(135deg, var(--light) 10%, var(--dark) 100%);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+}
+
+form button{
+    width: 30px;
+    height: 30px;
+    background-color: linear-gradient(135deg, var(--light) 10%, var(--dark) 100%);
+    color: white;
+    border-radius: 50px;
+}
+
+#back_btn{
+    background:linear-gradient(135deg, var(--light) 10%, var(--dark) 100%);
+    border: none;
+    cursor: pointer;
+}
